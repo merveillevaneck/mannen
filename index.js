@@ -1,4 +1,4 @@
-import { Client, Message } from 'discord.js'
+import { Client }  from 'discord.js'
 import { config } from './secrets.js'
 
 const client = new Client()
@@ -7,7 +7,7 @@ client.once('ready', () => {
     console.log('https://discord.com/oauth2/authorize?client_id=' + config.clientId + '&scope=bot')
 })
 
-const { prefix } = config
+const prefix = config.config
 
 const includesAny = (msg, subs) => {
     let includes = false
