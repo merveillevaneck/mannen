@@ -5,12 +5,15 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "pm2 start index.js --watch",
+    "stop": "pm2 stop 0 --watch",
+    "restart": "stop && start"
   },
   "dependencies": {
     "discord": "^0.8.2",
     "discord.js": "^12.3.1",
-    "node": "^14.8.0"
+    "node": "^14.8.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
